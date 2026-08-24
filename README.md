@@ -195,8 +195,6 @@ The official Elasticsearch client is flexible, but TypeScript often loses the ex
   <img src="./docs/typed-es-demo.gif" alt="An animated typed Elasticsearch query and its inferred response type" width="900">
 </p>
 
-<p align="center"><a href="./docs/typed-es-demo.svg">View the static version</a></p>
-
 <details>
 <summary>Same Example Without This Library</summary>
 
