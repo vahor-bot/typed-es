@@ -195,7 +195,6 @@ The official Elasticsearch client is flexible, but TypeScript often loses the ex
   <img src="./docs/typed-es-demo-remotion.gif" alt="An animated code editor showing typed-es inference for source fields, wildcards, aggregations, and msearch" width="900">
 </p>
 
-<p align="center"><a href="./docs/typed-es-demo.gif">Compare with the Asciinema version</a></p>
 
 <details>
 <summary>Same Example Without This Library</summary>
