@@ -28,12 +28,11 @@ header() {
 
 clear_screen
 header
-printf '%s' "${green}> ${reset}"
-type_line 'const query = {'
-type_line '  index: "products",'
-type_line '  _source: ["id", "name"],'
-type_line '  aggs: { avg_price: { avg: { field: "price" } } },'
-type_line '};'
+line "${white}const query = {${reset}"
+line '  index: "products",'
+line '  _source: ["id", "name"],'
+line '  aggs: { avg_price: { avg: { field: "price" } } },'
+line '};'
 sleep 1
 
 clear_screen
@@ -44,7 +43,7 @@ line '  _source: ["id", "name"],'
 line '  aggs: { avg_price: { avg: { field: "price" } } },'
 line '};'
 line ""
-line "${green}const result = await client.search(query);${reset}"
+line "${white}const result = await client.search(query);${reset}"
 line "                         ${yellow}// ^? SearchResponse<unknown>${reset}"
 line ""
 line "${white}result.hits.hits[0]._source${reset}"
@@ -64,16 +63,16 @@ line '  _source: ["id", "name"],'
 line '  aggs: { avg_price: { avg: { field: "price" } } },'
 line '});'
 line ""
-line "${green}const result = await client.search(query);${reset}"
+line "${white}const result = await client.search(query);${reset}"
 line "                         ${green}// ^? SearchResponse<{${reset}"
 line "                         ${green}//     _source: { id: number; name: string };${reset}"
 line "                         ${green}//     aggregations: { avg_price: { value: number | null } };${reset}"
 line "                         ${green}//   }>${reset}"
 line ""
-line "${green}result.hits.hits[0]._source.id${reset}"
+line "${white}result.hits.hits[0]._source.id${reset}"
 line "                         ${green}// ^? number${reset}"
 line ""
-line "${green}result.aggregations.avg_price.value${reset}"
+line "${white}result.aggregations.avg_price.value${reset}"
 line "       ${green}// ^? number | null${reset}"
 sleep 2.5
 
@@ -85,9 +84,9 @@ line "  _source: [${yellow}\"id\", \"name\", \"price\"${reset}],"
 line '  aggs: { avg_price: { avg: { field: "price" } } },'
 line '});'
 line ""
-line "${green}const result = await client.search(query);${reset}"
+line "${white}const result = await client.search(query);${reset}"
 line "                         ${green}// ^? _source now includes price: number${reset}"
 line ""
 line "${yellow}Change the query. The type follows it.${reset}"
-line "${muted}No duplicated interfaces. No `as any`.${reset}"
+line "${muted}No duplicated interfaces. No \`as any\`.${reset}"
 sleep 3
