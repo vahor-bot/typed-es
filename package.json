@@ -24,8 +24,7 @@
 	"main": "./dist/cjs/index.cjs",
 	"private": false,
 	"files": [
-		"dist",
-		"docs"
+		"dist"
 	],
 	"sideEffects": false,
 	"author": {
